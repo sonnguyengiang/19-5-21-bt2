@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+<p id="show">Ta có x = -3,5,1,3,2,10</p>
+<button type="button" onclick="chuyen()">chuyển!</button>
+</form>
+<script>
+    function chuyen() {
+        let x = [-3, 5, 1, 3, 2, 10];
+        let firts = 0;
+        let last = x.length - 1;
+        while (firts < last) {
+            let b = x[firts];
+            x[firts] = x[last];
+            x[last] = b;
+            firts++;
+            last--;
+        }
+        document.getElementById("show").innerHTML = "Thành :"  + x ;
+    }
+</script>
+</body>
+</html>
